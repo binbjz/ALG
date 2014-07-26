@@ -6,3 +6,4 @@ Creating a new branch is quick.
 Creating a new branch is quick and simple.
 Creating a new banch is dev.
 Creating bug branch.
+Testing color.
