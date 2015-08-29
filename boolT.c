@@ -9,13 +9,13 @@ int main(void)
 
     printf("Please enter an integer to be summed. ");
     printf("(q to quit): ");
-    inputB = (scanf("%ld", &sum) == 1);
+    inputB = (scanf("%ld", &num) == 1);
 
     while(inputB)
     {
         sum += num;
         printf("Please enter next integer (q to quit): ");
-        inputB = (scanf("%ld", &sum) == 1);
+        inputB = (scanf("%ld", &num) == 1);
     }
     printf("Those integers sum to %ld.\n", sum);
     return 0;
