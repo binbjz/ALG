@@ -17,5 +17,6 @@ int main(void)
 
     printf("\nThe circumference is %.2f", circumference);
     printf("\nThe area is %.2f\n", area);
+
     return 0;
 }
