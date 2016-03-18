@@ -1,5 +1,5 @@
 #!/bin/bash
-#filename: inotify_dir.sh
+#filename: total-monitor.sh
 #
 
 if [ "$#" -ne 1 ]; then
