@@ -6,6 +6,6 @@ monitoring directory
 
 binary tree 
 
-Binary Search 
+binary Search 
 
 generate the data randomly
