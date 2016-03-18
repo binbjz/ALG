@@ -41,7 +41,7 @@ class MyEventHandler(pyinotify.ProcessEvent):
         self.rebuild("OPEN event", event)
 
     def rebuild(self, event_name, event):
-        # specify exclude file suffix
+        # specify excluding files suffix
         patt=r"\.txt$|\.swp$|\.swx"
 
         exclude_filter=re.compile(patt)
