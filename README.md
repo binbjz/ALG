@@ -1,9 +1,11 @@
-practice for git 
-
-monitoring directory 
+binary search 
 
 binary tree 
 
-binary Search 
+enciphered data 
 
-generate the data randomly
+generate data randomly 
+
+monitor directory 
+
+practice
