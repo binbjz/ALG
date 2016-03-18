@@ -55,8 +55,8 @@ def main():
 
     # Specify the directory for monitoring, for example: /tmp
     wm.add_watch('/tmp', pyinotify.ALL_EVENTS, rec=True)
-    eh = MyEventHandler()
 
+    eh = MyEventHandler()
     notifier = pyinotify.Notifier(wm, eh)
     notifier.loop()
 
