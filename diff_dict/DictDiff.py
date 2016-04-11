@@ -2,7 +2,6 @@
 #filename: DictDiff.py
 #
 
-
 KEYNOTFOUND = '<KEYNOTFOUND>'
 
 class dict_cls(object):
