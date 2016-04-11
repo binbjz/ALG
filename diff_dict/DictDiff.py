@@ -36,7 +36,7 @@ if __name__ == '__main__':
     dict4 = {11:'students', 12:'teachers', 13:'friends'}
 
     dict5 = {21:'student', 22:'teacher', 23:'friend'}
-    dict6 = {21:'students', 22:'teachers', 23:'friends'}
+    dict6 = {31:'student', 32:'teacher', 33:'friend'}
 
     print dict_cls.dict_diff(dict1, dict2)
     print dict_cls.dict_diff(dict4, dict3)
