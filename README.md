@@ -12,6 +12,6 @@ generate data randomly
 
 monitor directory 
 
-practice
-
 pascal triangle
+
+practice
