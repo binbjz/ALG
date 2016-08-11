@@ -27,22 +27,22 @@ int main(int argc, char *argv[])
 
     fp = fopen(argv[1], "w+");
     fs = atoi(argv[2]);
-	srand((unsigned)time(NULL));
+    srand((unsigned)time(NULL));
 
-	for (a=0; a<fs; a++)
+    for (a=0; a<fs; a++)
+    {
+	fprintf(fp, "%d\t", a);
+
+	for(b=0; b<7; b++)
 	{
-		fprintf(fp, "%d\t", a);
-
-	    for(b=0; b<7; b++)
-	    {
-	        r=rand();
-			fprintf(fp, "%d\t", r);
-	    }
-		fputs("\n", fp);
+	    r=rand();
+	    fprintf(fp, "%d\t", r);
 	}
-	fclose(fp);
+	fputs("\n", fp);
+	}
+    fclose(fp);
 
-	return 0;
+    return 0;
 }
 
 int isNumeric(const char *s)
