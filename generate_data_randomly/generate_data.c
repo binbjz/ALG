@@ -32,7 +32,6 @@ int main(int argc, char *argv[])
     for (a=0; a<fs; a++)
     {
 	fprintf(fp, "%d\t", a);
-
 	for(b=0; b<7; b++)
 	{
 	    r=rand();
@@ -49,7 +48,7 @@ int isNumeric(const char *s)
 {
     bool num_b;
     if (s == NULL || *s == '\0' || isspace(*s))
-      return 0;
+        return 0;
 
     char *p;
     strtod (s, &p);
