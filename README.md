@@ -15,3 +15,5 @@ monitor directory
 pascal triangle
 
 practice
+
+tail call optimization
