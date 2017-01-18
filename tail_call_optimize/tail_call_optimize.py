@@ -44,4 +44,4 @@ def tail_recursion(n, total=0):
 
 
 if __name__ == '__main__':
-    print tail_recursion(10000000)
+    print tail_recursion(1000000)
