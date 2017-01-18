@@ -10,11 +10,11 @@ from sys import stdout
         / \
        /   \
       /     \
-     b      c
+     b       c
     /       / \
-  d      e    f
-    \              \
-     g              h
+   d       e   f
+    \           \
+     g           h
 '''
 
 Node = namedtuple('Nodes', ['data','left','right'])
