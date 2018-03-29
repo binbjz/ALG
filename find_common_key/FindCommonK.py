@@ -53,19 +53,15 @@ class FindCommKey(object):
 
 if __name__ == '__main__':
     files = ['ds1.txt', 'ds2.txt']
-    print("Started at: {}".format(datetime.datetime.now()))
-    print()
+    print("Started at: {}{}".format(datetime.datetime.now(), '\n'))
     print('Initial data:')
     fck = FindCommKey()
     for f in files:
         fck.find_common_key(f)
 
-    print()
-    print("Write to dic finished at: {}".format(datetime.datetime.now()))
+    print("Write to dic finished at: {}{}".format(datetime.datetime.now(), '\n'))
 
-    print()
     print('Result set:')
     for k, v in fck.result.items():
         print(','.join(map(str, k)), tuple(v))
-    print()
-    print("Finished at: {}".format(datetime.datetime.now()))
+    print("{}Finished at: {}".format('\n', datetime.datetime.now()))
