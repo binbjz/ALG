@@ -14,8 +14,8 @@ class FindCommKey(object):
     def find_common_key(self, target_file):
         with open(target_file, 'r+') as file_handler:
             for line in file_handler:
+                print(line, end='')
                 __line = list(map(int, line.strip().split(',')))
-                print(__line)
                 key, value = tuple(__line[:2]), __line[2:]
                 if key in self.combine:
                     self.combine[key] = self.combine[key] + value
