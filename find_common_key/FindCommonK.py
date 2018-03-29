@@ -2,6 +2,23 @@
 # filename: FindCommonK.py
 #
 
+"""
+ds1.txt
+1,2,3,4,7
+2,4,7,5,9,12
+3,8,6,7
+4,9,5,6
+3,8,7,2
+
+ds2.txt
+1,2,4,6
+2,3,6,5
+3,8,9,2
+4,9,6,9,12
+3,5,2,3
+6,2,7,3
+"""
+
 import datetime
 
 
@@ -35,7 +52,7 @@ class FindCommKey(object):
 
 
 if __name__ == '__main__':
-    files = ['a.txt', 'b.txt']
+    files = ['ds1.txt', 'ds2.txt']
     print("Started at: {}".format(datetime.datetime.now()))
     print()
     print('Initial data:')
