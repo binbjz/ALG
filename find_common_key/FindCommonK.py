@@ -1,65 +1,54 @@
 #!/usr/bin/env python
-#filename: FindCommonK.py
+# filename: FindCommonK.py
 #
-
-"""
-Searching two files for common lines and collecting their contents into set
-
-a.txt
-1,2,3,4
-2,4,7,5
-3,8,6,7
-4,9,5,6
-3,8,7,2
-
-b.txt
-1,2,4,6
-2,3,6,5
-3,8,9,2
-4,9,6,9
-3,5,2,3
-6,2,7,3
-
-results:
-1,2(3,4,4,6)
-3,8(6,7,7,2,9,2)
-4,9(5,6,6,9)
-"""
 
 import datetime
 
-Result = {}
 
-def find_common_key(targetFile):
-    with open(targetFile, 'r+') as file_handler:
-        for line in file_handler:
-            __line = map(int, line.strip().split(','))
-            key = (__line[0], __line[1]); value = [__line[2], __line[3]]
-            print 'key', key, ' -- ', 'value', value
-            if key in Result:
-                Result[key] = Result[key] + value
-            else:
-                Result[key] = value
-    return Result
+class FindCommKey(object):
+    def __init__(self):
+        self.combine = {}
+        self.counter = {}
+        self.result = {}
+
+    def find_common_key(self, target_file):
+        with open(target_file, 'r+') as file_handler:
+            for line in file_handler:
+                __line = list(map(int, line.strip().split(',')))
+                print(__line)
+                key, value = tuple(__line[:2]), __line[2:]
+                if key in self.combine:
+                    self.combine[key] = self.combine[key] + value
+                else:
+                    self.combine[key] = value
+
+                if key in self.counter:
+                    self.counter[key] = self.counter[key] + 1
+                else:
+                    self.counter[key] = 1
+
+        for k1, v1 in self.counter.items():
+            if v1 >= 2:
+                self.result[k1] = self.combine[k1]
+        print()
+        return self.result
 
 
 if __name__ == '__main__':
     files = ['a.txt', 'b.txt']
-    print "Started At: ", datetime.datetime.now()
-    print
-    print 'Initial:'
+    print("Started at: {}".format(datetime.datetime.now()))
+    print()
+    print('Initial data:')
+    fck = FindCommKey()
     for f in files:
-        find_common_key(f)
+        fck.find_common_key(f)
 
-    print
-    print "Write to Dic Finished At: ", datetime.datetime.now()
+    print()
+    print("Write to dic finished at: {}".format(datetime.datetime.now()))
 
-    print
-    print 'Result:'
-    for k, v in Result.items():
-        if len(v) > 2:
-            #print k, v
-            print ','.join(map(str, k)), tuple(v)
-
-    print
-    print "Finished At: ", datetime.datetime.now()
+    print()
+    print('Result set:')
+    for k, v in fck.result.items():
+        print(','.join(map(str, k)), tuple(v))
+    print()
+    print("Finished at: {}".format(datetime.datetime.now()))
