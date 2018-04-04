@@ -1,5 +1,5 @@
 
-# This is just an exercise data.
+# Exercise data.
 
 * binary search
 * binary tree 
