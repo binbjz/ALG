@@ -7,10 +7,11 @@
 # it's own grandparent, and catching such
 # exceptions to recall the stack.
 #
-import cProfile
-import functools
+
 import sys
 import timeit
+import cProfile
+import functools
 import traceback
 
 
