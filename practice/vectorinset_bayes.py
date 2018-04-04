@@ -36,7 +36,7 @@ class VectorInSet(object):
             if word in vocabList:
                 retVocabList[vocabList.index(word)] = 1
             else:
-                print 'word ', word, 'not in dict'
+                print('word {} not in dict'.format(word))
 
         return retVocabList
 
@@ -97,11 +97,11 @@ class VectorInSet(object):
 
         testEntry = ['love', 'my', 'dalmation']
         thisDoc = array(self.setOfWords2Vec(myVocabList, testEntry))
-        print testEntry,'classified as: ',self.classifyNB(thisDoc,p0V,p1V,pAb)
+        print('{} classified as: {}'.format(testEntry, self.classifyNB(thisDoc,p0V,p1V,pAb)))
 
         testEntry = ['stupid', 'garbage']
         thisDoc = array(self.setOfWords2Vec(myVocabList, testEntry))
-        print testEntry,'classified as: ',self.classifyNB(thisDoc,p0V,p1V,pAb)
+        print('{} classified as: {}'.format(testEntry, self.classifyNB(thisDoc,p0V,p1V,pAb)))
 
 
 def main():
