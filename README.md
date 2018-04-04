@@ -1,4 +1,7 @@
-### binary search ...
+
+# This is just an exercise data.
+
+### binary search
 
 binary tree 
 
