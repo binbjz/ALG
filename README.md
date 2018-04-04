@@ -1,5 +1,5 @@
 
-# Exercise data
+# ALG Exercise data
 
 * binary search
 * binary tree 
