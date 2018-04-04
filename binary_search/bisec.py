@@ -21,12 +21,13 @@ def bisec(lst, item):
             high = mid - 1
     raise ValueError
 
-    
+
 def bisec_(lst, x):
     i = bisect.bisect_left(lst, x)
     if i != len(lst) and lst[i] == x:
         return i
     raise ValueError
+
 
 def bisec_left(lst, item):
     low, high = 0, len(lst)
