@@ -4,6 +4,7 @@
 
 import bisect
 
+
 def bisec(lst, item):
     low, high = 0, len(lst) - 1
 
@@ -20,6 +21,7 @@ def bisec(lst, item):
             high = mid - 1
     raise ValueError
 
+    
 def bisec_(lst, x):
     i = bisect.bisect_left(lst, x)
     if i != len(lst) and lst[i] == x:
@@ -53,6 +55,7 @@ def bisec_right(lst, item):
             low = mid + 1
     return low
 
+
 def bisec_2d(lsts, x):
     meta = [lst[-1] for lst in lsts]
     # i1 = bisect.bisect_left(meta, x)
@@ -65,6 +68,7 @@ def bisec_2d(lsts, x):
         if i2 != len(lst) and lst[i2] == x:
             return i1, i2
     raise ValueError
+
 
 if __name__ == '__main__':
     lst = [1, 3, 5, 7, 9, 12]
